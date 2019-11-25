@@ -43,11 +43,18 @@ int main(void)
             {
                 k = n * m;
             }
-            else if (a == '/')
-            {
-                k = n / m;
+            else if (a == '/'){
+                 if(m == 0){
+                   
+                     goto end;
+                 }
+                 else {
+                     k = n / m;
+                 }
             }
         }
         printf("The expression has a value of: %.1f", k);
     }
+end:
+  printf("error : zero divisor");
 }
